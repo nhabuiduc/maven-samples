@@ -8,7 +8,7 @@ job('template-default') {
     logRotator(-1, 20)
     quietPeriod(10)
 
-    wrapper {
+    wrappers {
         colorizedOutput()
         timestamps()
     }
