@@ -12,8 +12,7 @@ def views = [
                 recurse: true,
         ]
 ].each { i ->
-    view {
-        name i['name']
+    listView(i['name']) {
         description i['description']
 
         filterBuildQueue(false)
@@ -33,6 +32,6 @@ def views = [
             buildButton()
         }
 
-        recurse()
+        recurse(true)
     }
 }
