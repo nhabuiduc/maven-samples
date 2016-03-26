@@ -18,6 +18,8 @@ def jobs = [
 
     job( job_name + '/build') {
         description('Builds the component')
+        using "template-defaults"
+        disabled(false)
 
         scm {
             git(i['repository'])
