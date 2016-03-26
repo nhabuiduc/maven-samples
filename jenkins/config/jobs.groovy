@@ -6,11 +6,6 @@ def jobs = [
                 id: "0815",
                 name: "projectname",
                 repository: "https://github.com/nhabuiduc/maven-samples.git",
-        ],
-        [
-                id: "0816",
-                name: "projectname",
-                repository: "https://github.com/nhabuiduc/maven-samples.git",
         ]
 ].each { i ->
     job_name = i['id'] + "-" + i['name'].replaceAll(" ", "-")
