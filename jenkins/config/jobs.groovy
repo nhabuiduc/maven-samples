@@ -12,7 +12,7 @@ def jobs = [
                 name: "projectname",
                 repository: "https://github.com/nhabuiduc/maven-samples.git",
                 recipient_list: "email1@example.com,email2@example.com",
-                label: "master",
+                label: "windows",
         ]
 ].each { i ->
     job_name_base = i['id'] + "-" + i['name'].replaceAll(" ", "-")
@@ -24,14 +24,14 @@ def jobs = [
           description('Folder for ' + job_name)
       }
 
-      if (i.containsKey('label')) {
-          label(i['label'])
-      }
-
       job( job_name + '/build') {
           description('Builds the component')
           using "template-defaults"
           disabled(false)
+
+          if (i.containsKey('label')) {
+              label(i['label'])
+          }
 
           scm {
               git(i['repository'])
