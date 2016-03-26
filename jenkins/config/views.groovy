@@ -1,14 +1,14 @@
 def views = [
         [
-                name: "View1",
+                name: "0815",
                 description: "",
-                regex: ".*",
+                regex: "^0815-.*",
                 recurse: true,
         ],
         [
-                name: "View2",
+                name: "0816",
                 description: "",
-                regex: ".*",
+                regex: "^0816-.*",
                 recurse: true,
         ]
 ].each { i ->
