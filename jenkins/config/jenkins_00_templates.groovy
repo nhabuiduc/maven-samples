@@ -9,7 +9,7 @@ job('template-default') {
     quietPeriod(10)
 
     wrappers {
-        colorizedOutput()
+        colorizeOutput()
         timestamps()
     }
 }
