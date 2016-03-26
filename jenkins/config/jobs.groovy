@@ -24,7 +24,7 @@ def jobs = [
           description('Folder for ' + job_name)
       }
 
-      if (i['label'] != "") {
+      if (i.containsKey('label')) {
           label(i['label'])
       }
 
