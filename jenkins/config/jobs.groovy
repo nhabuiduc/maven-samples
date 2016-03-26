@@ -6,15 +6,27 @@ def jobs = [
                 id: "0815",
                 name: "projectname",
                 repository: "https://github.com/nhabuiduc/maven-samples.git",
+        ],
+        [
+                id: "0816",
+                name: "projectname",
+                repository: "https://github.com/nhabuiduc/maven-samples.git",
+                recipient_list: "email1@example.com,email2@example.com",
+                label: "windows",
         ]
 ].each { i ->
     job_name = i['id'] + "-" + i['name'].replaceAll(" ", "-")
+    // Example: Override DEFAULT_RECIPIENTS for extendedEmail plugin
+    // recipient_list = i.containsKey('recipient_list') ? i['recipent_list'] : '$DEFAULT_RECIPIENTS'
 
     folder(job_name) {
         displayName('Project ' + job_name)
         description('Folder for ' + job_name)
     }
 
+    if (i['label'] != "") {
+        label(i['label'])
+    }
 
     job( job_name + '/build') {
         description('Builds the component')
