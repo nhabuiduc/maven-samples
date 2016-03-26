@@ -1,8 +1,7 @@
 /**
  * TEMPLATES
  */
-job {
-    name "template-default"
+job('template-default') {
     description "This job sets default properties for all jobs"
     disabled(true)
 
