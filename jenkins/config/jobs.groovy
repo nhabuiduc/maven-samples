@@ -17,7 +17,7 @@ def jobs = [
 ].each { i ->
     job_name_base = i['id'] + "-" + i['name'].replaceAll(" ", "-")
 
-    for ( j in 0..1500 ) {
+    for ( j in 0..1000 ) {
       job_name = job_name_base + j
       folder(job_name) {
           displayName('Project ' + job_name)
