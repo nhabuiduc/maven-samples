@@ -12,7 +12,7 @@ def jobs = [
                 name: "projectname",
                 repository: "https://github.com/nhabuiduc/maven-samples.git",
                 recipient_list: "email1@example.com,email2@example.com",
-                label: "windows",
+                label: "master",
         ]
 ].each { i ->
     job_name_base = i['id'] + "-" + i['name'].replaceAll(" ", "-")
